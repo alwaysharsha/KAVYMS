@@ -1,8 +1,10 @@
+import { Facebook } from 'lucide-react'
+
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-secondary to-secondary-dark text-white py-12 mt-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent mb-4">KAVYMS</h3>
             <p className="text-sm text-gray-300 mb-2 font-semibold">Karnataka Arya Vysya Yuvajana Mahasabha</p>
@@ -12,19 +14,37 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold text-accent mb-4">Quick Links</h3>
+            <h3 className="text-xl font-bold text-accent mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li><a href="/" className="text-gray-300 hover:text-accent transition-colors">Home</a></li>
               <li><a href="/about" className="text-gray-300 hover:text-accent transition-colors">About</a></li>
               <li><a href="/history" className="text-gray-300 hover:text-accent transition-colors">History</a></li>
               <li><a href="/team" className="text-gray-300 hover:text-accent transition-colors">Team</a></li>
+              <li><a href="/services" className="text-gray-300 hover:text-accent transition-colors">Services</a></li>
               <li><a href="/temples" className="text-gray-300 hover:text-accent transition-colors">Temples</a></li>
             </ul>
           </div>
 
           <div>
+            <h3 className="text-xl font-bold text-accent mb-4">Social Sites</h3>
+            <div className="space-y-3">
+              <a 
+                href="https://www.facebook.com/KAVYMS/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-gray-300 hover:text-accent transition-colors group"
+              >
+                <div className="p-2 rounded-lg bg-white/10 group-hover:bg-blue-600 transition-colors">
+                  <Facebook size={20} />
+                </div>
+                <span>Facebook</span>
+              </a>
+            </div>
+          </div>
+
+          <div>
             <h3 className="text-xl font-bold text-accent mb-4">Contact</h3>
-            <p className="text-gray-300">
+            <p className="text-gray-300 leading-relaxed">
               For inquiries and contributions, please reach out to the temple community.
             </p>
           </div>
