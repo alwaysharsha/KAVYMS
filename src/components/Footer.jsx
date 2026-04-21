@@ -1,4 +1,4 @@
-import { Facebook } from 'lucide-react'
+import { Facebook, Mail, MapPin } from 'lucide-react'
 
 const Footer = () => {
   return (
@@ -44,9 +44,35 @@ const Footer = () => {
 
           <div>
             <h3 className="text-xl font-bold text-accent mb-4">Contact</h3>
-            <p className="text-gray-300 leading-relaxed">
-              For inquiries and contributions, please reach out to the temple community.
+            <p className="text-gray-300 leading-relaxed mb-4">
+              For inquiries and contributions, please reach out to us.
             </p>
+            <div className="space-y-3">
+              <a 
+                href="mailto:kavymsmedia@gmail.com"
+                className="flex items-center gap-3 text-gray-300 hover:text-accent transition-colors group"
+              >
+                <div className="p-2 rounded-lg bg-white/10 group-hover:bg-accent transition-colors">
+                  <Mail size={20} />
+                </div>
+                <span className="text-sm">kavymsmedia@gmail.com</span>
+              </a>
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&destination=12.979737675735%2C77.578496913344"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 text-gray-300 hover:text-accent transition-colors group"
+              >
+                <div className="p-2 rounded-lg bg-white/10 group-hover:bg-accent transition-colors">
+                  <MapPin size={20} />
+                </div>
+                <span className="text-sm leading-relaxed">
+                  16, Sheshadri Road,<br />
+                  Bangalore, Karnataka<br />
+                  India
+                </span>
+              </a>
+            </div>
           </div>
         </div>
 
