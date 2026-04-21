@@ -7,8 +7,11 @@ import Team from './pages/Team'
 import TempleList from './pages/TempleList'
 
 function App() {
+  // Use basename only in production (GitHub Pages)
+  const basename = import.meta.env.MODE === 'production' ? '/KAVYMS' : ''
+  
   return (
-    <Router basename="/KAVYMS">
+    <Router basename={basename}>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />

@@ -43,6 +43,7 @@ const convertToDirectImageUrl = (url) => {
 
 const TeamMemberCard = ({ member }) => {
   const [imageError, setImageError] = useState(false)
+  const [imageLoaded, setImageLoaded] = useState(false)
   const [useIframe, setUseIframe] = useState(false)
   const directImageUrl = convertToDirectImageUrl(member.photoUrl)
   const hasValidPhoto = directImageUrl && directImageUrl.length > 0 && !imageError
@@ -58,11 +59,19 @@ const TeamMemberCard = ({ member }) => {
           <img
             src={directImageUrl}
             alt={member.name}
-            className="w-full h-full rounded-full object-cover border-4 border-primary"
+            className={`w-full h-full rounded-full object-cover border-4 border-primary transition-opacity duration-500 ${
+              imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
             crossOrigin="anonymous"
             referrerPolicy="no-referrer"
+            onLoad={() => setImageLoaded(true)}
             onError={() => setUseIframe(true)}
           />
+          {!imageLoaded && (
+            <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+              <User size={64} className="text-white" />
+            </div>
+          )}
         </div>
       ) : hasValidPhoto && useIframe && fileId ? (
         <div className="relative w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full border-4 border-primary">
