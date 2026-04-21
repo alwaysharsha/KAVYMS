@@ -2,7 +2,7 @@ import { Facebook, Mail, MapPin } from 'lucide-react'
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-secondary to-secondary-dark text-white py-12 mt-12">
+    <footer className="bg-gradient-to-br from-secondary to-secondary-dark text-white py-12 mt-12 relative z-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
