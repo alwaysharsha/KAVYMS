@@ -2,6 +2,10 @@
 
 **Karnataka Arya Vysya Yuvajana Mahasabha**
 
+[![Deploy to GitHub Pages](https://github.com/alwaysharsha/KAVYMS/actions/workflows/deploy.yml/badge.svg)](https://github.com/alwaysharsha/KAVYMS/actions/workflows/deploy.yml)
+
+🌐 **Live Site**: https://alwaysharsha.github.io/KAVYMS/
+
 A modern, mobile-responsive website for KAVYMS featuring interactive Vasavi temple listings with dynamic Google Sheets integration, map views, and traditional Indian temple aesthetics.
 
 ## 🌟 Features
