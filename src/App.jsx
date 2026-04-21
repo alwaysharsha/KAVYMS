@@ -5,19 +5,18 @@ import About from './pages/About'
 import History from './pages/History'
 import Team from './pages/Team'
 import TempleList from './pages/TempleList'
+import ServiceActivities from './pages/ServiceActivities'
 
 function App() {
-  // Use basename only in production (GitHub Pages)
-  const basename = import.meta.env.MODE === 'production' ? '/KAVYMS' : ''
-  
   return (
-    <Router basename={basename}>
+    <Router basename="/KAVYMS">
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/history" element={<History />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/services" element={<ServiceActivities />} />
           <Route path="/temples" element={<TempleList />} />
         </Routes>
       </Layout>
