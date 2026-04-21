@@ -46,7 +46,7 @@ Just edit the spreadsheet and refresh the website.
 
 2. **GitHub Actions will automatically deploy the site**
 
-3. **Visit**: https://alwaysharsha.github.io/KAYYMS_website/
+3. **Visit**: https://alwaysharsha.github.io/KAVYMS/
 
 ## Troubleshooting
 

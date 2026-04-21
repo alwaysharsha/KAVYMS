@@ -43,8 +43,8 @@ Before you begin, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/alwaysharsha/KAYYMS_website.git
-cd KAYYMS_website
+git clone https://github.com/alwaysharsha/KAVYMS.git
+cd KAVYMS
 ```
 
 ### 2. Install Dependencies
@@ -94,7 +94,7 @@ This serves the production build locally so you can test exactly what will be de
 ## 📁 Project Structure
 
 ```
-KAYYMS_website/
+KAVYMS/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml          # GitHub Actions deployment workflow
@@ -215,7 +215,7 @@ The website automatically deploys to GitHub Pages when you push to the `main` br
 3. **Monitor Deployment**:
    - Go to Actions tab in your repository
    - Watch the deployment progress
-   - Once complete, visit: `https://alwaysharsha.github.io/KAYYMS_website/`
+   - Once complete, visit: `https://alwaysharsha.github.io/KAVYMS/`
 
 ### Manual Deployment
 

@@ -8,7 +8,7 @@ import TempleList from './pages/TempleList'
 
 function App() {
   return (
-    <Router basename="/KAYYMS_website">
+    <Router basename="/KAVYMS">
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
