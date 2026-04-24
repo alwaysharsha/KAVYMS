@@ -4,6 +4,7 @@ import TempleFilters from '../components/TempleFilters'
 import TempleCard from '../components/TempleCard'
 import TempleMap from '../components/TempleMap'
 import { MapIcon, List, Loader2 } from 'lucide-react'
+import { SHEET_URLS } from '../config/sheets'
 
 const TempleList = () => {
   const [temples, setTemples] = useState([])
@@ -19,8 +20,6 @@ const TempleList = () => {
     search: ''
   })
 
-  const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1L7XH5_A-4hKAaKIjeFTV9-a99_n5Cl1tvIaenK_yE7g/export?format=csv'
-
   useEffect(() => {
     fetchTempleData()
   }, [])
@@ -32,7 +31,7 @@ const TempleList = () => {
   const fetchTempleData = async () => {
     try {
       setLoading(true)
-      const response = await fetch(SHEET_URL)
+      const response = await fetch(SHEET_URLS.TEMPLES)
       const csvText = await response.text()
       
       Papa.parse(csvText, {

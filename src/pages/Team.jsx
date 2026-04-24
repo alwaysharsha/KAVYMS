@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Papa from 'papaparse'
 import { User, Loader2, ChevronDown, ChevronUp } from 'lucide-react'
+import { SHEET_URLS } from '../config/sheets'
 
 const convertToDirectImageUrl = (url) => {
   if (!url) return ''
@@ -114,8 +115,7 @@ const Team = () => {
   const [error, setError] = useState(null)
   const [showPastTeams, setShowPastTeams] = useState(false)
 
-  const TEAM_SHEET_URL = 'https://docs.google.com/spreadsheets/d/1o7ap8DtkO5SDTEzBp_7hzcW2k1zobTdYWls5coWBeuA/export?format=csv'
-
+  
   useEffect(() => {
     fetchTeamData()
   }, [])
@@ -123,7 +123,7 @@ const Team = () => {
   const fetchTeamData = async () => {
     try {
       setLoading(true)
-      const response = await fetch(TEAM_SHEET_URL)
+      const response = await fetch(SHEET_URLS.TEAM)
       const csvText = await response.text()
       
       Papa.parse(csvText, {
