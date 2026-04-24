@@ -1,6 +1,7 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
 import AnnouncementBanner from './AnnouncementBanner'
+import WebsiteWatermark from './WebsiteWatermark'
 
 const Layout = ({ children }) => {
   return (
@@ -13,6 +14,7 @@ const Layout = ({ children }) => {
         }}
       />
       
+      <WebsiteWatermark />
       <div className="relative z-10 flex flex-col min-h-screen">
         <AnnouncementBanner />
         <Navbar />

@@ -102,7 +102,7 @@ const AnnouncementBanner = () => {
       {visibleMessages.map((msg) => (
         <div
           key={msg.id}
-          className={`w-full ${getColorClasses(msg.order)} text-white px-5 py-3.5 flex items-center justify-center gap-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl`}
+          className={`w-full ${getColorClasses(msg.order)} text-white px-5 py-3.5 flex items-center justify-center gap-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden`}
         >
           <p className="text-center text-sm font-semibold flex-1">{msg.message}</p>
           {msg.dismissible && (
